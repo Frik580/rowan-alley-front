@@ -1,0 +1,28 @@
+.about-project {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  min-height: 300px;
+}
+
+.about-project__title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-style: normal;
+  /* color: #3b3a2d; */
+  margin-bottom: 25px;
+}
+
+.about-project__conteiner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-project__column {
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    font-style: normal;
+    width: 45%;
+}

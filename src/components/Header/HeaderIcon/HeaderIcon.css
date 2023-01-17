@@ -1,0 +1,17 @@
+.icon {
+  height: 31px;
+  margin-right: 12px;
+}
+
+.icon__image {
+  height: 31px;
+}
+
+.icon__hover {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.8;
+}
+
+.icon__hover:hover {
+  opacity: 1;
+}

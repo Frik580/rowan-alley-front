@@ -1,0 +1,17 @@
+.logo {
+  margin-right: 25px;
+  height: 64px;
+}
+
+.logo__image {
+  height: 64px;
+}
+
+.logo__hover {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.8;
+  }
+  
+  .logo__hover:hover {
+    opacity: 1;
+  }

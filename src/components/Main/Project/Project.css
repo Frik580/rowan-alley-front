@@ -1,0 +1,6 @@
+.project {
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  background-image: linear-gradient(180deg, rgba(242, 227, 159, 0) 40%, #E8E0BC 60%, rgba(242, 227, 159, 0) 100%);
+}
