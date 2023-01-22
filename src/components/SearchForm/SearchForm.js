@@ -35,7 +35,7 @@ function SearchForm() {
             name="name"
             className="searchform__form-item"
             minLength="1"
-            maxLength="30"
+            maxLength="50"
             placeholder="Найти Героя"
             required
           />
@@ -50,7 +50,6 @@ function SearchForm() {
           />
         </fieldset>
       </form>
-      <p className="searchform__border"></p>
     </section>
   );
 }

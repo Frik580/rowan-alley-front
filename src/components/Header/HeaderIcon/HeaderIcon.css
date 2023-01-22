@@ -4,7 +4,22 @@
 }
 
 .icon__image {
-  height: 31px;
+  /* height: 31px; */
+  height: 100%;
+}
+
+@media (max-width: 1000px) {
+  .icon {
+    height: 25px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .icon {
+    height: 20px;
+    margin-right: 8px;
+  }
 }
 
 .icon__hover {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import photo from "../../../../images/Rect.png"
 import "./Card.css";
 
 function Card(
@@ -26,26 +27,17 @@ function Card(
 
   return (
     <li className="element">
-      <div className="element__info">
-        <div className="element__text">
-          <h2 className="element__title">{movie.nameRU}</h2>
-          <p className="element__time">{`${movie.duration} мин`}</p>
-        </div>
-        {
-          <button
-            onClick={() => onMovieDelete(movie)}
-            className={"element__delete-button"}
-            type="button"
-          />
-        }
-      </div>
-      <a href={movie.trailerLink} className="element__link">
+      {/* <div className="element__info">
+          <p className="element__time">Иванов Иван Иванович</p>
+      </div> */}
+      <a href={"https://api.nomoreparties.co"} className="element__link">
         <img
-          src={url}
+          src={photo}
           className="element__pic"
-          alt={`Фильм "${movie.nameRU}"`}
+          alt={"Иванов Иван Иванович"}
         />
       </a>
+      <p className="element__title">Иванов Иван Иванович</p>
     </li>
   );
 }

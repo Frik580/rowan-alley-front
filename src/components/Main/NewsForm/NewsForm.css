@@ -1,0 +1,139 @@
+.newsform {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  background-color: #f2eac7;
+}
+
+@media (max-width: 1000px) {
+  .newsform {
+    padding: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsform {
+    padding: 50px;
+  }
+}
+
+.newsform__title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+  .newsform__title {
+    font-size: 18px;
+  }
+}
+
+.newsform__conteiner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.newsform__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .newsform__form {
+    flex-direction: column;
+  }
+}
+
+.newsform__form-conteiner {
+  display: flex;
+  padding: 0;
+  align-items: center;
+  width: 100%;
+  border-radius: 6px;
+  border: 1.5px solid rgba(59, 58, 45, 0.2);
+  margin-right: 20px;
+  background-color: #fff;
+}
+
+@media (max-width: 800px) {
+  .newsform__form-conteiner {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.newsform__form-item {
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 36px;
+  font-weight: 400;
+  font-style: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.newsform__form-item:focus {
+  outline: none;
+  outline: 1.5px solid rgba(59, 58, 45, 1);
+  border-radius: 6px;
+}
+
+@media (max-width: 1000px) {
+  .newsform__form-item {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsform__form-item {
+    font-size: 11px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.newsform__form-button {
+  background: none;
+  border: none;
+  outline: none;
+  height: 36px;
+  border-radius: 6px;
+  background-color: #e04f4f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 36px;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0 20px;
+}
+
+.newsform__form-button:enabled {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.newsform__form-button:enabled:hover {
+  opacity: 0.8;
+}
+
+.newsform__form-button_disabled {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0.1;
+  cursor: default;
+}
+
+.newsform__form-item::-webkit-input-placeholder {
+  color: #a0a0a0;
+}

@@ -1,0 +1,33 @@
+.nextcards {
+  /* padding: 50px 70px 0;
+  min-height: 166px; */
+  margin: 25px auto 50px;
+}
+
+/* @media (max-width: 1000px) {
+  .nextcards {
+    padding: 50px 30px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .nextcards {
+    padding: 50px 10px 0;
+  }
+} */
+
+.nextcards__button {
+  background: none;
+  border: none;
+  outline: none;
+  height: 36px;
+  width: 100px;
+  border-radius: 6px;
+  background-color: #E04F4F;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 36px;
+  font-weight: 500;
+  font-style: normal;
+}

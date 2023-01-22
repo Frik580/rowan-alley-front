@@ -1,13 +1,14 @@
 import "./Cards.css";
 import React, { useState, useEffect } from "react";
 import Card from "../Card/Card";
+import SearchForm from "../../../SearchForm/SearchForm";
 // import {
 //   WINDOW_SIZE,
 //   MOVIES_QUANTITY,
 //   MOVIES_QUANTITY_NEXT,
 // } from "../../utils/Constants";
 
-function Cards(
+function Cards() {
 //   {
 //       moviesList,
 //       isFindMovies,
@@ -16,7 +17,6 @@ function Cards(
 //       onCloseNext,
 //       onOpenNext,
 //   }
-) {
   //   const [width, setWidth] = useState(window.innerWidth);
   //   const [renderMovies, setRenderMovies] = useState([]);
   //   const [quantity, setQuantity] = useState(null);
@@ -50,24 +50,29 @@ function Cards(
 
   return (
     <section className="elements">
+      <h2 className="elements__title">ГАЛЛЕРЕЯ ГЕРОЕВ</h2>
+      <SearchForm />
       {/* {isFindMovies && !moviesList.length && ( */}
       <p className="elements__message">Ничего не найдено</p>
       {/* )} */}
       {/* {messageError && <p className="elements__message">{messageError}</p>} */}
       <ul className="elements__list">
-        {/* {moviesList.map((card) => (
+        {/* {renderMovies.map((card) => (
           <Card
             key={card._id}
             movie={card}
           />
         ))} */}
-        {/* <Card />
         <Card />
         <Card />
         <Card />
         <Card />
         <Card />
-        <Card /> */}
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </ul>
     </section>
   );

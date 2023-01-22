@@ -1,22 +1,19 @@
-.logo {
-  margin-right: 25px;
+.logo-partner {
   height: 64px;
 }
 
-.logo__image {
+.logo-partner__image {
   height: 100%;
 }
 
 @media (max-width: 1000px) {
-  .logo {
+  .logo-partner {
     height: 50px;
-    margin-right: 15px;
   }
 }
 
 @media (max-width: 600px) {
-  .logo {
+  .logo-partner {
     height: 40px;
-    margin-right: 10px;
   }
 }
