@@ -32,14 +32,15 @@
 }
 
 .partners__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, 200px); */
+  display: flex;
   justify-content: center;
-  gap: 40px 32.5px;
+  gap: 40px;
   list-style-type: none;
 }
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   .partners__list {
     grid-template-columns: repeat(auto-fit, 180px);
     gap: 40px 26px;
@@ -51,4 +52,4 @@
     grid-template-columns: repeat(auto-fit, 160px);
       gap: 40px 16px;
   }
-}
+} */

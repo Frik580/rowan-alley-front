@@ -8,8 +8,8 @@
   align-items: center;
   background-color: #f2eac7;
   padding: 25px 50px;
-  z-index: 2;
-  box-shadow:  0 0 30px rgba(0, 0, 0, 0.3);
+  /* z-index: 2; */
+  /* box-shadow:  inset 0px 5px 0px rgba(0, 0, 0, .2); */
 }
 
 @media (max-width: 1000px) {
