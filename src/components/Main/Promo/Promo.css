@@ -7,7 +7,8 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: calc(100vh - 114px);
-  background-image: url("../../../images/background_light.png");
+  /* background-image: url("../../../images/background_light.png"); */
+  background-image: url("../../../images/background_1.JPG");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
@@ -34,7 +35,9 @@
   max-width: 500px;
   margin: auto 0;
   padding-left: 60px;
-  color: #3B3A2D;
+  color: #fff;
+  text-shadow: rgb(40, 40, 40) 1px 1px 10px;;
+  /* color: #3B3A2D; */
 }
 
 @media (max-width: 1000px) {

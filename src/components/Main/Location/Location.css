@@ -1,0 +1,41 @@
+.location {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    background-color: rgb(60, 60, 60);
+    color: #e8e8e8;
+  }
+  
+  @media (max-width: 1000px) {
+    .location {
+      padding: 75px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .location {
+      padding: 50px;
+    }
+  }
+  
+  .location__title {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+    font-style: normal;
+    margin-bottom: 25px;
+  }
+  
+  @media (max-width: 600px) {
+    .location__title {
+      font-size: 18px;
+    }
+  }
+  
+  .location__conteiner {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
