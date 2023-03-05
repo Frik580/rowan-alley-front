@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   padding: 100px;
-  /* min-height: 300px; */
 }
 
 @media (max-width: 1000px) {
@@ -32,20 +31,11 @@
 }
 
 .partners__list {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, 200px); */
   display: flex;
   justify-content: center;
   gap: 40px;
   list-style-type: none;
 }
-
-/* @media (max-width: 1000px) {
-  .partners__list {
-    grid-template-columns: repeat(auto-fit, 180px);
-    gap: 40px 26px;
-  }
-} */
 
 @media (max-width: 600px) {
   .partners__list {

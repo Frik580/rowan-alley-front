@@ -1,0 +1,40 @@
+.about {
+  padding-top: 100px;
+}
+
+@media (max-width: 1000px) {
+  .about {
+    padding-top: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    padding-top: 50px;
+  }
+}
+
+.about__title {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 900;
+  font-style: normal;
+  padding-bottom: 25px;
+}
+
+.about__text {
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 600px) {
+  .about__text {
+    font-size: 12px;
+  }
+}
+
+.about__text:last-of-type {
+  margin-top: 15px;
+}

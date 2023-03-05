@@ -12,7 +12,7 @@ function Main() {
       <Project />
       <NewsForm />
       <Partners />
-      <Location />
+      {/* <Location /> */}
     </main>
   );
 }

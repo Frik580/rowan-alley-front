@@ -6,31 +6,50 @@ import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
+import CardDiscription from "../CardDiscription/CardDiscription";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
-
-import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import { getAllCards } from "../../utils/MainApi";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(
-    JSON.parse(localStorage.getItem("user"))
-  );
+  const [messageError, setMessageError] = useState("");
+  const [isPreloader, setIsPreloader] = useState(false);
+  const [cardsList, setCardsList] = useState([]);
+
+  // API даннах
+
+  useEffect(() => {
+    getAllCards()
+      .then((res) => {
+        console.log(res);
+        setCardsList(res);
+      })
+      .catch((err) => {
+        console.log(err);
+        setMessageError(
+          "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз."
+        );
+      })
+      .finally(() => {
+        setIsPreloader(false);
+      });
+  }, []);
 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
-      <div className="root">
-        <Header />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Main />
-                <Footer />
-              </>
-            }
-          />
+    <div className="root">
+      <Header />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Main />
+              <CardDiscription />
+              {/* <Footer /> */}
+            </>
+          }
+        />
 
-          {/* <Route
+        {/* <Route
             path="movies"
             element={
               <ProtectedRoute loggedIn={loggedIn}>
@@ -42,7 +61,7 @@ function App() {
             }
           /> */}
 
-          {/* <Route
+        {/* <Route
             path="admin"
             element={
               <ProtectedRoute loggedIn={loggedIn}>
@@ -55,7 +74,7 @@ function App() {
             }
           /> */}
 
-          {/* <Route
+        {/* <Route
             path="signin"
             element={
               <ProtectedRoute loggedIn={!loggedIn}>
@@ -66,8 +85,8 @@ function App() {
                 />
               </ProtectedRoute>
             }
-          /> */}
-          {/* <Route
+          />
+          <Route
             path="signup"
             element={
               <ProtectedRoute loggedIn={!loggedIn}>
@@ -80,10 +99,10 @@ function App() {
             }
           /> */}
 
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </div>
-    </CurrentUserContext.Provider>
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

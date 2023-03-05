@@ -17,9 +17,11 @@
 }
 
 .hover-button {
-  transition: opacity 0.3s ease-in-out;
+  /* transition: opacity 0.3s ease-in-out; */
+  transition: background-color 0.3s ease-in-out;
 }
 
 .hover-button:hover {
-  opacity: 0.8;
+  /* opacity: 0.8; */
+  background-color: rgb(224, 110, 100);
 }

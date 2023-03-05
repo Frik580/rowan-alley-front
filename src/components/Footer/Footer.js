@@ -1,6 +1,6 @@
 import "./Footer.css";
 import imgAdds from "../../images/adds3.png";
-import imgEmail from "../../images/email3.png";
+import imgEmail from "../../images/email4.png";
 
 function Footer() {
   const date = new Date();
@@ -18,16 +18,6 @@ function Footer() {
           <img className="footer__icon" src={imgEmail} alt="" />
           fondmira.perm@gmail.com
         </a>
-
-        {/* <a className="footer__link hover" href="https://practicum.yandex.ru">
-          Яндекс.Практикум
-        </a>
-        <a
-          className="footer__link hover"
-          href="https://github.com/yandex-praktikum"
-        >
-          Github
-        </a> */}
       </div>
     </footer>
   );
