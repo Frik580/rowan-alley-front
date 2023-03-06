@@ -3,11 +3,11 @@ import AboutProject from "./AboutProject/AboutProject";
 import Cards from "./Cards/Cards";
 import NextCards from "../../NextCards/NextCards";
 
-function Project() {
+function Project({ cardsList }) {
   return (
     <section className="project">
       <AboutProject />
-      <Cards />
+      <Cards cardsList={cardsList} />
       <NextCards />
       <div className="project__image_num_1" />
       <div className="project__image_num_2" />

@@ -42,8 +42,8 @@ function App() {
           path="/"
           element={
             <>
-              <Main />
-              <CardDiscription />
+              <Main cardsList={cardsList} />
+              {/* <CardDiscription /> */}
               {/* <Footer /> */}
             </>
           }

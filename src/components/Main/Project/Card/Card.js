@@ -1,29 +1,30 @@
 import React, { useEffect, useState } from "react";
-import photo from "../../../../images/Rect.png"
+import photo from "../../../../images/Rect.png";
 import "./Card.css";
 
-function Card(
-//     {
+function Card({ card }) //     {
 //   saved,
 //   movie,
 //   onMovieLike,
 //   onMovieDelete,
 //   moviesSavedList,
 // }
-) {
-//   const [url, setUrl] = useState("");
-//   const [liked, setLiked] = useState("");
-//   useEffect(() => {
-//     if (saved) {
-//       setUrl(movie.image);
-//     } else {
-//       setUrl(`https://api.nomoreparties.co${movie.image.url}`);
-//       const isLiked = moviesSavedList.some(
-//         (item) => item.movieId === movie.id.toString()
-//       );
-//       setLiked(isLiked);
-//     }
-//   }, [saved, moviesSavedList, movie, onMovieLike]);
+{
+  console.log(card.image);
+
+  //   const [url, setUrl] = useState("");
+  //   const [liked, setLiked] = useState("");
+  //   useEffect(() => {
+  //     if (saved) {
+  //       setUrl(movie.image);
+  //     } else {
+  //       setUrl(`https://api.nomoreparties.co${movie.image.url}`);
+  //       const isLiked = moviesSavedList.some(
+  //         (item) => item.movieId === movie.id.toString()
+  //       );
+  //       setLiked(isLiked);
+  //     }
+  //   }, [saved, moviesSavedList, movie, onMovieLike]);
 
   return (
     <li className="element">
@@ -32,12 +33,12 @@ function Card(
       </div> */}
       <a href={"https://api.nomoreparties.co"} className="element__link">
         <img
-          src={photo}
+          src={card.image}
           className="element__pic"
-          alt={"Иванов Иван Иванович"}
+          alt={card.name}
         />
       </a>
-      <p className="element__title">Иванов Иван Иванович</p>
+      <p className="element__title">{card.name}</p>
     </li>
   );
 }

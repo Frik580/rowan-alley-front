@@ -8,7 +8,7 @@ import SearchForm from "../../../SearchForm/SearchForm";
 //   MOVIES_QUANTITY_NEXT,
 // } from "../../utils/Constants";
 
-function Cards() {
+function Cards({cardsList}) {
 //   {
 //       moviesList,
 //       isFindMovies,
@@ -21,16 +21,17 @@ function Cards() {
   //   const [renderMovies, setRenderMovies] = useState([]);
   //   const [quantity, setQuantity] = useState(null);
 
-  //   useEffect(() => {
-  //     const handleResizeWindow = () =>
-  //       setTimeout(setWidth(window.innerWidth), 10000);
+    useEffect(() => {
+      console.log(cardsList)
+      // const handleResizeWindow = () =>
+      //   setTimeout(setWidth(window.innerWidth), 10000);
 
-  //     window.addEventListener("resize", handleResizeWindow);
+      // window.addEventListener("resize", handleResizeWindow);
 
-  //     return () => {
-  //       window.removeEventListener("resize", handleResizeWindow);
-  //     };
-  //   }, []);
+      // return () => {
+      //   window.removeEventListener("resize", handleResizeWindow);
+      // };
+    }, [cardsList]);
 
   //   useEffect(() => {
   //     if (width >= WINDOW_SIZE.HIGH) {
@@ -57,12 +58,13 @@ function Cards() {
       {/* )} */}
       {/* {messageError && <p className="elements__message">{messageError}</p>} */}
       <ul className="elements__list">
-        {/* {renderMovies.map((card) => (
+        {cardsList.map((card) => (
           <Card
             key={card._id}
-            movie={card}
+            card={card}
           />
-        ))} */}
+        ))}
+        {/* <Card />
         <Card />
         <Card />
         <Card />
@@ -71,8 +73,7 @@ function Cards() {
         <Card />
         <Card />
         <Card />
-        <Card />
-        <Card />
+        <Card /> */}
       </ul>
     </section>
   );

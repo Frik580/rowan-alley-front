@@ -5,11 +5,11 @@ import NewsForm from "./NewsForm/NewsForm";
 import Partners from "./Partners/Partners";
 import Location from "./Location/Location";
 
-function Main() {
+function Main({cardsList}) {
   return (
     <main className="main">
       <Promo />
-      <Project />
+      <Project cardsList={cardsList} />
       <NewsForm />
       <Partners />
       {/* <Location /> */}

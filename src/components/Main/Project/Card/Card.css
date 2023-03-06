@@ -21,20 +21,20 @@
   }
   
   .element__pic {
-    height: 260px;
+    height: 300px;
     object-fit: cover;
     width: 100%;
   }
   
   @media (max-width: 1000px) {
     .element__pic {
-      height: 220px;
+      height: 270px;
     }
   }
   
   @media (max-width: 600px) {
     .element__pic {
-      height: 200px;
+      height: 250px;
     }
   }
   
