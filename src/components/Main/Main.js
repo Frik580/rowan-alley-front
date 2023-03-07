@@ -12,7 +12,7 @@ function Main({cardsList}) {
       <Project cardsList={cardsList} />
       <NewsForm />
       <Partners />
-      {/* <Location /> */}
+      <Location />
     </main>
   );
 }

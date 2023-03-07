@@ -1,5 +1,5 @@
 // export const BASE_URL = "https://api.movies.arseniy.nomoredomains.club";
-export const BASE_URL = "http://localhost:3001";
+export const BASE_URL = "http://rowan-alley-api.ru";
 
 const handleResponse = (res) => {
   if (res.ok) {
@@ -54,10 +54,8 @@ export const createMovie = (data) => {
 };
 
 export const getAllCards = () => {
-  // const jwt = localStorage.getItem("jwt");
   return fetch(`${BASE_URL}/cards`, {
     headers: {
-      // authorization: `Bearer ${jwt}`,
       "Content-Type": "application/json",
     },
   }).then(handleResponse);

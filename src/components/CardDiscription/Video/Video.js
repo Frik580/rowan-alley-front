@@ -8,8 +8,13 @@ function Video() {
         <iframe
           className="video__iframe"
           title="This is a unique title"
-          src="https://rutube.ru/play/embed/b09c6934e76f869e0174cb304c7faf63"
-          allowFullScreen={true}
+          // src="https://rutube.ru/play/embed/b09c6934e76f869e0174cb304c7faf63"
+
+          src="https://rutube.ru/play/embed/e1f62d85725941f3a6c9258be0d5103e"
+          // allow="clipboard-write; autoplay"
+          // webkitallowfullscreen="true"
+          // mozallowfullscreen="true"
+          allowFullScreen
         />
       </div>
     </section>

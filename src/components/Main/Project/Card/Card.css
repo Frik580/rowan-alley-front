@@ -3,6 +3,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    /* justify-content: space-around; */
     background-color: #fdfdfd;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
@@ -23,6 +24,7 @@
   .element__pic {
     height: 300px;
     object-fit: cover;
+    object-position: top;
     width: 100%;
   }
   
@@ -38,7 +40,7 @@
     }
   }
   
-  .element__info {
+  /* .element__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +52,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-  }
+  } */
   
   .element__title {
     font-size: 18px;
@@ -61,7 +63,7 @@
     text-align: center;
   }
   
-  .element__time {
+  /* .element__time {
     font-size: 11px;
     line-height: 1.2;
     font-weight: 400;
@@ -74,7 +76,7 @@
     background: none;
     border: none;
     outline: none;
-    /* background-image: url(../../images/likeoff.svg); */
+    background-image: url(../../images/likeoff.svg);
     background-repeat: no-repeat;
     background-position: center;
     height: 30px;
@@ -89,7 +91,7 @@
     background: none;
     border: none;
     outline: none;
-    /* background-image: url(../../images/likeon.svg); */
+    background-image: url(../../images/likeon.svg);
     background-repeat: no-repeat;
     background-position: center;
     height: 30px;
@@ -104,7 +106,7 @@
     background: none;
     border: none;
     outline: none;
-    /* background-image: url(../../images/delete.svg); */
+    background-image: url(../../images/delete.svg);
     background-repeat: no-repeat;
     background-position: center;
     height: 30px;
@@ -113,9 +115,8 @@
     background-color: #f9f9f9;
     cursor: pointer;
     margin-left: auto;
-  }
+  } */
   
   .element__link {
     display: flex;
-    margin-top: auto;
   }
