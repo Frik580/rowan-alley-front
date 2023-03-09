@@ -5,11 +5,25 @@ import NewsForm from "./NewsForm/NewsForm";
 import Partners from "./Partners/Partners";
 import Location from "./Location/Location";
 
-function Main({cardsList}) {
+function Main({
+  cardsList,
+  count,
+  onCloseNext,
+  onOpenNext,
+  isButtonNext,
+  onNextCards,
+}) {
   return (
     <main className="main">
       <Promo />
-      <Project cardsList={cardsList} />
+      <Project
+        cardsList={cardsList}
+        count={count}
+        onCloseNext={onCloseNext}
+        onOpenNext={onOpenNext}
+        isButtonNext={isButtonNext}
+        onNextCards={onNextCards}
+      />
       <NewsForm />
       <Partners />
       <Location />

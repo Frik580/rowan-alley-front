@@ -3,12 +3,24 @@ import AboutProject from "./AboutProject/AboutProject";
 import Cards from "./Cards/Cards";
 import NextCards from "../../NextCards/NextCards";
 
-function Project({ cardsList }) {
+function Project({
+  cardsList,
+  count,
+  onCloseNext,
+  onOpenNext,
+  isButtonNext,
+  onNextCards,
+}) {
   return (
     <section className="project">
       <AboutProject />
-      <Cards cardsList={cardsList} />
-      <NextCards />
+      <Cards
+        cardsList={cardsList}
+        count={count}
+        onCloseNext={onCloseNext}
+        onOpenNext={onOpenNext}
+      />
+      <NextCards onNextCards={onNextCards} isButtonNext={isButtonNext} />
       <div className="project__image_num_1" />
       <div className="project__image_num_2" />
       <div className="project__image_num_3" />

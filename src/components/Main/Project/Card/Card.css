@@ -9,13 +9,13 @@
     border-radius: 8px;
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 1070px) {
     .element {
       width: 180px;
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 720px) {
     .element {
       width: 160px;
     }
@@ -28,13 +28,13 @@
     width: 100%;
   }
   
-  @media (max-width: 1000px) {
+  @media (max-width: 1070px) {
     .element__pic {
       height: 270px;
     }
   }
   
-  @media (max-width: 600px) {
+  @media (max-width: 720px) {
     .element__pic {
       height: 250px;
     }

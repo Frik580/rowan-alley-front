@@ -1,18 +1,18 @@
 import "./NextCards.css";
 import React from "react";
 
-function NextСards({ onNextMovies, isButtonNext }) {
+function NextСards({ onNextCards, isButtonNext }) {
   return (
     <section className="nextcards">
-      {/* {isButtonNext && ( */}
+      {isButtonNext && (
         <button
-          onClick={onNextMovies}
+          onClick={onNextCards}
           className={"nextcards__button hover-button"}
           type="button"
         >
           Далее
         </button>
-      {/* )} */}
+      )}
     </section>
   );
 }

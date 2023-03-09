@@ -14,6 +14,8 @@ function App() {
   const [messageError, setMessageError] = useState("");
   const [isPreloader, setIsPreloader] = useState(false);
   const [cardsList, setCardsList] = useState([]);
+  const [count, setCount] = useState(null);
+  const [isButtonNext, setIsButtonNext] = useState(true);
 
   // API даннах
 
@@ -42,7 +44,14 @@ function App() {
           path="/"
           element={
             <>
-              <Main cardsList={cardsList} />
+              <Main
+                cardsList={cardsList}
+                count={count}
+                onCloseNext={() => setIsButtonNext(false)}
+                onOpenNext={() => setIsButtonNext(true)}
+                isButtonNext={isButtonNext}
+                onNextCards={() => setCount(count + 1)}
+              />
               {/* <CardDiscription /> */}
               {/* <Footer /> */}
             </>

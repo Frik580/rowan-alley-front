@@ -1,17 +1,18 @@
 export const WINDOW_SIZE = {
   HIGH: 1280,
-  MIDDLE: 768,
+  MIDDLE: 898,
+  MIDDLE_2: 562,
 };
 
 export const MOVIES_QUANTITY = {
-  HIGH: 12,
+  HIGH: 10,
   MIDDLE: 8,
-  SMALL: 5,
+  MIDDLE_2: 9,
+  SMALL: 6,
 };
 
 export const MOVIES_QUANTITY_NEXT = {
-  HIGH: 3,
-  MIDDLE: 2,
+  HIGH: 5,
+  MIDDLE: 4,
+  MIDDLE_2: 3,
 };
-
-export const SHORT_MOVIE_TIME = 40;
