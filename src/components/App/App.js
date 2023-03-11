@@ -14,15 +14,17 @@ function App() {
   const [messageError, setMessageError] = useState("");
   const [isPreloader, setIsPreloader] = useState(false);
   const [cardsList, setCardsList] = useState([]);
+  const [queryCardsList, setQueryCardsList] = useState([]);
   const [count, setCount] = useState(null);
   const [isButtonNext, setIsButtonNext] = useState(true);
+  const [isFindCards, setIsFindCards] = useState(false);
 
   // API даннах
 
   useEffect(() => {
     getAllCards()
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setCardsList(res);
       })
       .catch((err) => {
@@ -36,6 +38,19 @@ function App() {
       });
   }, []);
 
+  function handleFindCards(data) {
+    setIsFindCards(true);
+    const query = cardsList.filter((card) =>
+      card.name.toLowerCase().includes(data.name.toLowerCase())
+    );
+    // console.log(query);
+    setQueryCardsList(query);
+    // setQueryUserMovies(query);
+    // handleShortUserFilms(query);
+    // setQueryUserMoviesText(data.name.toLowerCase());
+    // setIsFindUserMovies(true);
+  }
+
   return (
     <div className="root">
       <Header />
@@ -45,10 +60,11 @@ function App() {
           element={
             <>
               <Main
-                cardsList={cardsList}
+                // cardsList={cardsList}
+                cardsList={isFindCards ? queryCardsList : cardsList}
+                onFindCards={handleFindCards}
                 count={count}
-                onCloseNext={() => setIsButtonNext(false)}
-                onOpenNext={() => setIsButtonNext(true)}
+                onOpenNext={(data) => setIsButtonNext(data)}
                 isButtonNext={isButtonNext}
                 onNextCards={() => setCount(count + 1)}
               />

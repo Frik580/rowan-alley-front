@@ -8,10 +8,10 @@ import Location from "./Location/Location";
 function Main({
   cardsList,
   count,
-  onCloseNext,
   onOpenNext,
   isButtonNext,
   onNextCards,
+  onFindCards,
 }) {
   return (
     <main className="main">
@@ -19,10 +19,10 @@ function Main({
       <Project
         cardsList={cardsList}
         count={count}
-        onCloseNext={onCloseNext}
         onOpenNext={onOpenNext}
         isButtonNext={isButtonNext}
         onNextCards={onNextCards}
+        onFindCards={onFindCards}
       />
       <NewsForm />
       <Partners />

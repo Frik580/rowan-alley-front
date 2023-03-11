@@ -6,10 +6,10 @@ import NextCards from "../../NextCards/NextCards";
 function Project({
   cardsList,
   count,
-  onCloseNext,
   onOpenNext,
   isButtonNext,
   onNextCards,
+  onFindCards,
 }) {
   return (
     <section className="project">
@@ -17,8 +17,8 @@ function Project({
       <Cards
         cardsList={cardsList}
         count={count}
-        onCloseNext={onCloseNext}
         onOpenNext={onOpenNext}
+        onFindCards={onFindCards}
       />
       <NextCards onNextCards={onNextCards} isButtonNext={isButtonNext} />
       <div className="project__image_num_1" />

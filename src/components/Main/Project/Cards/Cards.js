@@ -8,7 +8,7 @@ import {
   MOVIES_QUANTITY_NEXT,
 } from "../../../../utils/Constants";
 
-function Cards({ cardsList, count, onCloseNext, onOpenNext }) {
+function Cards({ cardsList, count, onOpenNext, onFindCards }) {
   const [width, setWidth] = useState(window.innerWidth);
   const [renderCards, setRenderCards] = useState([]);
   const [quantity, setQuantity] = useState(null);
@@ -30,7 +30,9 @@ function Cards({ cardsList, count, onCloseNext, onOpenNext }) {
     } else if (width >= WINDOW_SIZE.MIDDLE) {
       setQuantity(MOVIES_QUANTITY.MIDDLE + count * MOVIES_QUANTITY_NEXT.MIDDLE);
     } else if (width >= WINDOW_SIZE.MIDDLE_2) {
-      setQuantity(MOVIES_QUANTITY.MIDDLE_2 + count * MOVIES_QUANTITY_NEXT.MIDDLE_2);
+      setQuantity(
+        MOVIES_QUANTITY.MIDDLE_2 + count * MOVIES_QUANTITY_NEXT.MIDDLE_2
+      );
     } else if (width < WINDOW_SIZE.MIDDLE_2) {
       setQuantity(MOVIES_QUANTITY.SMALL + count * MOVIES_QUANTITY_NEXT.MIDDLE);
     }
@@ -39,16 +41,16 @@ function Cards({ cardsList, count, onCloseNext, onOpenNext }) {
       return index < quantity;
     });
     setRenderCards(cards);
-    quantity >= cardsList.length ? onCloseNext() : onOpenNext();
-  }, [cardsList, count, onCloseNext, onOpenNext, quantity, width]);
+    quantity >= cardsList.length ? onOpenNext(false) : onOpenNext(true);
+  }, [cardsList, count, onOpenNext, quantity, width]);
 
   return (
     <section className="elements">
       <h2 className="elements__title">ГАЛЛЕРЕЯ ГЕРОЕВ</h2>
-      <SearchForm />
-      {/* {isFindMovies && !moviesList.length && ( */}
-      <p className="elements__message">Ничего не найдено</p>
-      {/* )} */}
+      <SearchForm onFindCards={onFindCards} />
+      {!cardsList.length && (
+        <p className="elements__message">Ничего не найдено</p>
+      )}
       {/* {messageError && <p className="elements__message">{messageError}</p>} */}
       <ul className="elements__list">
         {renderCards.map((card) => (
