@@ -22,3 +22,14 @@ function Video() {
 }
 
 export default Video;
+
+<iframe
+  width="720"
+  height="405"
+  src="https://rutube.ru/play/embed/64599d183e4053cdccb737c7a6b249bb"
+  frameBorder="0"
+  allow="clipboard-write; autoplay"
+  webkitAllowFullScreen
+  mozallowfullscreen
+  allowFullScreen
+></iframe>;

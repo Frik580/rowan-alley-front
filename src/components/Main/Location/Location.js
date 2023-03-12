@@ -3,7 +3,7 @@ import "./Location.css";
 function Location() {
   return (
     <section className="location">
-      <h2 className="location__title">МЕСТОПОЛОЖЕНИЕ АЛЛЕИ ГЕРОЕВ</h2>
+      <h2 className="location__title">АЛЛЕЯ ГЕРОЕВ НА КАРТЕ ГОРОДА</h2>
       <div className="location__conteiner">
         <iframe
           title="Рябиновая аллея Героев"

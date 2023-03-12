@@ -16,6 +16,7 @@ function App() {
   const [cardsList, setCardsList] = useState([]);
   const [queryCardsList, setQueryCardsList] = useState([]);
   const [count, setCount] = useState(null);
+  const [queryCardsListText, setQueryCardsListText] = useState(null);
   const [isButtonNext, setIsButtonNext] = useState(true);
   const [isFindCards, setIsFindCards] = useState(false);
 
@@ -47,7 +48,7 @@ function App() {
     setQueryCardsList(query);
     // setQueryUserMovies(query);
     // handleShortUserFilms(query);
-    // setQueryUserMoviesText(data.name.toLowerCase());
+    setQueryCardsListText(data.name.toLowerCase());
     // setIsFindUserMovies(true);
   }
 
@@ -63,6 +64,7 @@ function App() {
                 // cardsList={cardsList}
                 cardsList={isFindCards ? queryCardsList : cardsList}
                 onFindCards={handleFindCards}
+                queryCardsListText={queryCardsListText}
                 count={count}
                 onOpenNext={(data) => setIsButtonNext(data)}
                 isButtonNext={isButtonNext}

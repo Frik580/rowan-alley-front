@@ -10,6 +10,7 @@ function Project({
   isButtonNext,
   onNextCards,
   onFindCards,
+  queryCardsListText,
 }) {
   return (
     <section className="project">
@@ -19,6 +20,7 @@ function Project({
         count={count}
         onOpenNext={onOpenNext}
         onFindCards={onFindCards}
+        queryCardsListText={queryCardsListText}
       />
       <NextCards onNextCards={onNextCards} isButtonNext={isButtonNext} />
       <div className="project__image_num_1" />

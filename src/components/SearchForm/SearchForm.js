@@ -2,7 +2,7 @@ import "./SearchForm.css";
 import React, { useEffect } from "react";
 import { useFormAndValidation } from "../../hooks/useFormAndValidation";
 
-function SearchForm({ onFindCards, queryMoviesText, isErrors }) {
+function SearchForm({ onFindCards, queryCardsListText, isErrors }) {
   const { values, handleChange, errors, isValid, setValues, resetForm } =
     useFormAndValidation();
 
@@ -10,10 +10,11 @@ function SearchForm({ onFindCards, queryMoviesText, isErrors }) {
       resetForm();
     }, [resetForm]);
   
-    // useEffect(() => {
-    // console.log(isValid);
-    // setValues({ name: null });
-  // }, [isValid]);
+    useEffect(() => {
+      queryCardsListText
+        ? setValues({ name: queryCardsListText })
+        : setValues({ name: "" });
+    }, [queryCardsListText, setValues]);
 
   // useEffect(() => {
   //   errors.name ? isErrors(true) : isErrors(false)

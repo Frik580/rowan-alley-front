@@ -8,7 +8,13 @@ import {
   MOVIES_QUANTITY_NEXT,
 } from "../../../../utils/Constants";
 
-function Cards({ cardsList, count, onOpenNext, onFindCards }) {
+function Cards({
+  cardsList,
+  count,
+  onOpenNext,
+  onFindCards,
+  queryCardsListText,
+}) {
   const [width, setWidth] = useState(window.innerWidth);
   const [renderCards, setRenderCards] = useState([]);
   const [quantity, setQuantity] = useState(null);
@@ -47,7 +53,10 @@ function Cards({ cardsList, count, onOpenNext, onFindCards }) {
   return (
     <section className="elements">
       <h2 className="elements__title">ГАЛЛЕРЕЯ ГЕРОЕВ</h2>
-      <SearchForm onFindCards={onFindCards} />
+      <SearchForm
+        onFindCards={onFindCards}
+        queryCardsListText={queryCardsListText}
+      />
       {!cardsList.length && (
         <p className="elements__message">Ничего не найдено</p>
       )}

@@ -12,6 +12,7 @@ function Main({
   isButtonNext,
   onNextCards,
   onFindCards,
+  queryCardsListText,
 }) {
   return (
     <main className="main">
@@ -23,6 +24,7 @@ function Main({
         isButtonNext={isButtonNext}
         onNextCards={onNextCards}
         onFindCards={onFindCards}
+        queryCardsListText={queryCardsListText}
       />
       <NewsForm />
       <Partners />
