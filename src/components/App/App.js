@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     getAllCards()
       .then((res) => {
-        // console.log(res);
+        console.log(res);
         setCardsList(res);
       })
       .catch((err) => {
@@ -42,7 +42,9 @@ function App() {
   function handleFindCards(data) {
     setIsFindCards(true);
     const query = cardsList.filter((card) =>
-      card.name.toLowerCase().includes(data.name.toLowerCase())
+      card.name
+        .toLowerCase()
+        .includes(data.name.toLowerCase().replace(/\s+/g, ""))
     );
     // console.log(query);
     setQueryCardsList(query);
@@ -61,7 +63,6 @@ function App() {
           element={
             <>
               <Main
-                // cardsList={cardsList}
                 cardsList={isFindCards ? queryCardsList : cardsList}
                 onFindCards={handleFindCards}
                 queryCardsListText={queryCardsListText}
@@ -70,7 +71,7 @@ function App() {
                 isButtonNext={isButtonNext}
                 onNextCards={() => setCount(count + 1)}
               />
-              {/* <CardDiscription /> */}
+              <CardDiscription />
               {/* <Footer /> */}
             </>
           }
