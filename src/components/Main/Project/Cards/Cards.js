@@ -63,7 +63,7 @@ function Cards({
       {/* {messageError && <p className="elements__message">{messageError}</p>} */}
       <ul className="elements__list">
         {renderCards.map((card) => (
-          <Card key={card._id} card={card} />
+          <Card key={card._id} card={card} id={card._id} />
         ))}
       </ul>
     </section>

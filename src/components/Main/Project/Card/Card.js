@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Card.css";
 
-function Card({ card }) {
+function Card({ card, id }) {
   return (
-    <li className="element">
-      {/* <a href={"https://api.nomoreparties.co"} className="element__link"> */}
+    <Link to={`cards/${id}`} className="link">
+      <li className="element">
         <img src={card.image} className="element__pic" alt={card.name} />
-      {/* </a> */}
-      <p className="element__title">{card.name}</p>
-    </li>
+        <p className="element__title">{card.name}</p>
+      </li>
+    </Link>
   );
 }
 

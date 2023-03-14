@@ -71,23 +71,16 @@ function App() {
                 isButtonNext={isButtonNext}
                 onNextCards={() => setCount(count + 1)}
               />
-              <CardDiscription />
-              {/* <Footer /> */}
             </>
           }
         />
 
-        {/* <Route
-            path="movies"
+        <Route
+            path="cards/:id"
             element={
-              <ProtectedRoute loggedIn={loggedIn}>
-                <>
-                  <Movies />
-                  <Footer />
-                </>
-              </ProtectedRoute>
+              <CardDiscription cards={cardsList} />
             }
-          /> */}
+          />
 
         {/* <Route
             path="admin"
