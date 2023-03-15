@@ -9,6 +9,8 @@
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .video__iframe {

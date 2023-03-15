@@ -24,6 +24,23 @@
   }
 }
 
+.discription__button {
+  background: none;
+  border: none;
+  outline: none;
+  height: 36px;
+  width: 100px;
+  border-radius: 6px;
+  background-color: rgb(224, 79, 79);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 36px;
+  font-weight: 500;
+  font-style: normal;
+  margin: auto;
+}
+
 .discription__image_num_1 {
   position: absolute;
   top: 0px;

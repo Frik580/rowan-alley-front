@@ -1,18 +1,15 @@
 import "./Video.css";
+import Iframe from "react-iframe";
 
 function Video({ card }) {
   return (
     <section className="video">
       <h2 className="video__title">{card.name.toUpperCase()}</h2>
       <div className="video__conteiner">
-        <iframe
+        <Iframe
+          url={card.trailerLink}
           className="video__iframe"
           title={card.name}
-          src={card.trailerLink}
-          // allow="clipboard-write; autoplay"
-          // webkitallowfullscreen="true"
-          // mozallowfullscreen="true"
-          allowFullScreen
         />
       </div>
     </section>

@@ -23,6 +23,14 @@ function App() {
   // API даннах
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      // behavior: "smooth",
+    });
+  }, []);
+
+  useEffect(() => {
     getAllCards()
       .then((res) => {
         console.log(res);
@@ -76,11 +84,9 @@ function App() {
         />
 
         <Route
-            path="cards/:id"
-            element={
-              <CardDiscription cards={cardsList} />
-            }
-          />
+          path="cards/:id"
+          element={<CardDiscription cards={cardsList} />}
+        />
 
         {/* <Route
             path="admin"
