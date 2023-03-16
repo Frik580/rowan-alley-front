@@ -28,7 +28,7 @@ function Main({
       />
       <NewsForm />
       <Partners />
-      {/* <Location /> */}
+      <Location />
     </main>
   );
 }

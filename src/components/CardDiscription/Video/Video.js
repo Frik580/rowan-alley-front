@@ -8,8 +8,17 @@ function Video({ card }) {
       <div className="video__conteiner">
         <Iframe
           url={card.trailerLink}
-          className="video__iframe"
+          // className="video__iframe"
           title={card.name}
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          // display="block"
+          position="absolute"
+          allow="clipboard-write; autoplay"
+          webkitAllowFullScreen
+          mozallowfullscreen
+          allowFullScreen
         />
       </div>
     </section>

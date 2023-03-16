@@ -3,7 +3,7 @@
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  min-height: 1000px;
+  /* min-height: 1000px; */
   background-image: linear-gradient(180deg, #fff 50%, #e8e0bc 100%);
   z-index: 0;
   max-width: 1280px;
@@ -38,7 +38,19 @@
   line-height: 36px;
   font-weight: 500;
   font-style: normal;
-  margin: auto;
+  margin: 100px auto 0;
+}
+
+@media (max-width: 1000px) {
+  .discription__button {
+    margin: 75px auto 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .discription__button {
+    margin: 50px auto 0;
+  }
 }
 
 .discription__image_num_1 {
@@ -64,7 +76,7 @@
     background-image: url("../../images/pic-8.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .8;
+    opacity: .3;
   }
   
   .discription__image_num_3 {

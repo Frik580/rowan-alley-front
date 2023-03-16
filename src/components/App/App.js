@@ -11,8 +11,9 @@ import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import { getAllCards } from "../../utils/MainApi";
 
 function App() {
+  const navigate = useNavigate();
   const [messageError, setMessageError] = useState("");
-  const [isPreloader, setIsPreloader] = useState(false);
+  const [isButtonHome, setIsButtonHome] = useState(false);
   const [cardsList, setCardsList] = useState([]);
   const [queryCardsList, setQueryCardsList] = useState([]);
   const [count, setCount] = useState(null);
@@ -21,14 +22,6 @@ function App() {
   const [isFindCards, setIsFindCards] = useState(false);
 
   // API даннах
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      // behavior: "smooth",
-    });
-  }, []);
 
   useEffect(() => {
     getAllCards()
@@ -43,7 +36,7 @@ function App() {
         );
       })
       .finally(() => {
-        setIsPreloader(false);
+        // setIsPreloader(false);
       });
   }, []);
 
@@ -54,12 +47,8 @@ function App() {
         .toLowerCase()
         .includes(data.name.toLowerCase().replace(/\s+/g, ""))
     );
-    // console.log(query);
     setQueryCardsList(query);
-    // setQueryUserMovies(query);
-    // handleShortUserFilms(query);
     setQueryCardsListText(data.name.toLowerCase());
-    // setIsFindUserMovies(true);
   }
 
   return (
@@ -85,7 +74,9 @@ function App() {
 
         <Route
           path="cards/:id"
-          element={<CardDiscription cards={cardsList} />}
+          element={
+            <CardDiscription cards={cardsList} onButtonHome={() => navigate(-1)} />
+          }
         />
 
         {/* <Route

@@ -26,7 +26,7 @@ function Header() {
           title={"ВКонтакте"}
         />
         <HeaderIcon
-          url={"https://vk.ru/fond.mira2020"}
+          url={"https://rutube.ru/channel/29206955"}
           src={imgRT}
           title={"RuTube"}
         />
