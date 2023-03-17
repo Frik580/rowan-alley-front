@@ -25,3 +25,9 @@
   /* opacity: 0.8; */
   background-color: rgb(224, 110, 100);
 }
+
+.link {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+}

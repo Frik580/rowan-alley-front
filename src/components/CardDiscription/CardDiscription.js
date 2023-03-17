@@ -1,5 +1,5 @@
 import "./CardDiscription.css";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Video from "./Video/Video";
 import About from "./About/About";
@@ -23,14 +23,18 @@ function CardDiscription({ cards, onButtonHome }) {
       <Video card={card} />
       <About card={card} />
       {/* <Awards /> */}
-
-      <button
+      <Link to="/" className="link">
+        <button className="discription__button hover-button" type="button">
+          Назад
+        </button>
+      </Link>
+      {/* <button
         onClick={onButtonHome}
-        className={"discription__button hover-button"}
+        className="discription__button hover-button"
         type="button"
       >
         Назад
-      </button>
+      </button> */}
       <div className="discription__image_num_1" />
       <div className="discription__image_num_2" />
       <div className="discription__image_num_3" />

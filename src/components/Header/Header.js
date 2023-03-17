@@ -31,7 +31,7 @@ function Header() {
           title={"RuTube"}
         />
         <div className="header__border"></div>
-        <a className="header__button hover" href="#">
+        <a className="header__button hover" href="#footer">
           Контакты
         </a>
       </div>

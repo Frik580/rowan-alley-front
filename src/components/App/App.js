@@ -1,19 +1,18 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { Routes, Route, useNavigate } from "react-router-dom";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
+import Popup from "../Popup/Popup";
 import CardDiscription from "../CardDiscription/CardDiscription";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import { getAllCards } from "../../utils/MainApi";
 
 function App() {
-  const navigate = useNavigate();
-  const [messageError, setMessageError] = useState("");
-  const [isButtonHome, setIsButtonHome] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [message, setMessage] = useState("");
   const [cardsList, setCardsList] = useState([]);
   const [queryCardsList, setQueryCardsList] = useState([]);
   const [count, setCount] = useState(null);
@@ -24,16 +23,20 @@ function App() {
   // API даннах
 
   useEffect(() => {
+    console.log(message);
+  }, [message, isPopupOpen]);
+
+  useEffect(() => {
     getAllCards()
       .then((res) => {
-        console.log(res);
         setCardsList(res);
       })
       .catch((err) => {
         console.log(err);
-        setMessageError(
+        setMessage(
           "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз."
         );
+        setIsPopupOpen(true);
       })
       .finally(() => {
         // setIsPreloader(false);
@@ -74,9 +77,7 @@ function App() {
 
         <Route
           path="cards/:id"
-          element={
-            <CardDiscription cards={cardsList} onButtonHome={() => navigate(-1)} />
-          }
+          element={<CardDiscription cards={cardsList} />}
         />
 
         {/* <Route
@@ -119,6 +120,14 @@ function App() {
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Popup
+        isOpen={isPopupOpen}
+        onClose={() => {
+          setIsPopupOpen(false);
+          setMessage("");
+        }}
+        message={message}
+      />
       <Footer />
     </div>
   );

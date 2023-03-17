@@ -6,7 +6,7 @@ function Footer() {
   const date = new Date();
 
   return (
-    <footer className="footer">
+    <footer className="footer" id={"footer"}>
       <div className="footer__border" />
       <div className="footer__conteiner">
         <p className="footer__text">&#169; {date.getFullYear()}</p>

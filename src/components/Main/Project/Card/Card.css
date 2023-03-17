@@ -1,9 +1,3 @@
-.link {
-  display: flex;
-  text-decoration: none;
-  color: #000;
-}
-
 .element {
   width: 200px;
   overflow: hidden;
