@@ -36,7 +36,7 @@
   justify-content: space-between;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .about-project__conteiner {
     flex-direction: column;
   }
@@ -50,9 +50,18 @@
   width: 45%;
 }
 
+@media (max-width: 900px) {
+  .about-project__column {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
   .about-project__column {
     font-size: 12px;
-    width: 100%;
   }
+}
+
+.about-project__paragraph{
+  margin-bottom: 10px;
 }

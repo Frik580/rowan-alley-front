@@ -45,82 +45,15 @@
   }
 }
 
-/* .element__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 14px;
-  }
-  
-  .element__text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  } */
-
 .element__title {
   font-size: 18px;
   line-height: 1.2;
   font-weight: 400;
   font-style: normal;
-  margin: 5px;
+  padding: 5px;
+  margin: auto;
   text-align: center;
 }
-
-/* .element__time {
-    font-size: 11px;
-    line-height: 1.2;
-    font-weight: 400;
-    font-style: normal;
-    color: #a0a0a0;
-    margin-top: 9px;
-  }
-  
-  .element__like-button {
-    background: none;
-    border: none;
-    outline: none;
-    background-image: url(../../images/likeoff.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  .element__like-button_active {
-    background: none;
-    border: none;
-    outline: none;
-    background-image: url(../../images/likeon.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #000;
-    cursor: pointer;
-    margin-left: auto;
-  }
-  
-  .element__delete-button {
-    background: none;
-    border: none;
-    outline: none;
-    background-image: url(../../images/delete.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: #f9f9f9;
-    cursor: pointer;
-    margin-left: auto;
-  } */
 
 .element__link {
   display: flex;

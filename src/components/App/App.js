@@ -23,10 +23,6 @@ function App() {
   // API даннах
 
   useEffect(() => {
-    console.log(message);
-  }, [message, isPopupOpen]);
-
-  useEffect(() => {
     getAllCards()
       .then((res) => {
         setCardsList(res);
