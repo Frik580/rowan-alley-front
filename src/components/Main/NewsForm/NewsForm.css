@@ -39,7 +39,7 @@
 .newsform__form {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
 }
 
@@ -51,13 +51,16 @@
 
 .newsform__form-conteiner {
   display: flex;
+  flex-direction: column;
   padding: 0;
   align-items: center;
   width: 100%;
   border-radius: 6px;
   border: 1.5px solid rgba(59, 58, 45, 0.2);
   margin-right: 20px;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.6);
+
 }
 
 @media (max-width: 800px) {
@@ -70,7 +73,8 @@
 .newsform__form-item {
   border: none;
   width: 100%;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: #fff;
   font-family: inherit;
   font-size: 14px;
   line-height: 36px;
@@ -100,7 +104,7 @@
 
 @media (max-width: 600px) {
   .newsform__form-item {
-    font-size: 11px;
+    font-size: 12px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -140,4 +144,22 @@
 
 .newsform__form-item::-webkit-input-placeholder {
   color: #a0a0a0;
+}
+
+.newsform__error {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-style: normal;
+  color: #ff4062;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .newsform__error {
+    font-size: 10px;
+  }
 }

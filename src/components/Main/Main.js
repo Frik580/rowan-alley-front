@@ -13,6 +13,7 @@ function Main({
   onNextCards,
   onFindCards,
   queryCardsListText,
+  onRegister,
 }) {
   return (
     <main className="main">
@@ -26,7 +27,7 @@ function Main({
         onFindCards={onFindCards}
         queryCardsListText={queryCardsListText}
       />
-      <NewsForm />
+      <NewsForm onRegister={onRegister}/>
       <Partners />
       <Location />
     </main>

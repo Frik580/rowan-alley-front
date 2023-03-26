@@ -8,14 +8,14 @@ const handleResponse = (res) => {
   return Promise.reject(`Ошибка: ${res.status} ${res.statusText}`);
 };
 
-export const register = (name, email, password) => {
-  return fetch(`${BASE_URL}/signup`, {
+export const register = (name, email) => {
+  return fetch(`${BASE_URL}/users`, {
     method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ name, email, password }),
+    body: JSON.stringify({ name, email }),
   }).then(handleResponse);
 };
 

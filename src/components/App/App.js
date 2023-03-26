@@ -8,7 +8,7 @@ import Main from "../Main/Main";
 import Popup from "../Popup/Popup";
 import CardDiscription from "../CardDiscription/CardDiscription";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
-import { getAllCards } from "../../utils/MainApi";
+import { getAllCards, register } from "../../utils/MainApi";
 
 function App() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -26,6 +26,7 @@ function App() {
     getAllCards()
       .then((res) => {
         setCardsList(res);
+        console.log(res);
       })
       .catch((err) => {
         console.log(err);
@@ -50,6 +51,34 @@ function App() {
     setQueryCardsListText(data.name.toLowerCase());
   }
 
+  const onRegister = ({ name, email }) => {
+    console.log({ name, email });
+    register(name, email)
+      .then((res) => {
+        console.log(res);
+        setMessage(`${res.name}, Вы подписаны на наши новости`);
+        setIsPopupOpen(true);
+        // onLogin({ email, password });
+        // return res;
+      })
+      .catch((err) => {
+        console.log(err);
+        if (err === "Ошибка: 409 Conflict") {
+          setMessage("Пользователь с таким email уже существует");
+        } else if (err === "Ошибка: 400 Bad Request") {
+          setMessage("Переданы некорректные данные");
+        } else {
+          setMessage("При регистрации пользователя произошла ошибка");
+        }
+        setIsPopupOpen(true);
+      })
+      .finally(() => {
+        // setTimeout(() => {
+        //   setMessageError("");
+        // }, 4000);
+      });
+  };
+
   return (
     <div className="root">
       <Header />
@@ -66,6 +95,7 @@ function App() {
                 onOpenNext={(data) => setIsButtonNext(data)}
                 isButtonNext={isButtonNext}
                 onNextCards={() => setCount(count + 1)}
+                onRegister={onRegister}
               />
             </>
           }
