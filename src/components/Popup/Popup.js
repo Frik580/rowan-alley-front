@@ -8,7 +8,6 @@ function Popup({ isOpen, onClose, message }) {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        // className="popup__conteiner"
         className={`popup__conteiner ${isOpen && "popup__conteiner_opened"}`}
       >
         <button

@@ -27,7 +27,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 280px;
+  max-width: 260px;
   cursor: default;
   background-color: #fff;
   margin: 30px 30px auto auto;
@@ -35,7 +35,7 @@
   border-radius: 8px;
   overflow: hidden;
   transform: translateY(-400px);
-  transition: transform 3s;
+  transition: transform 2s;
 }
 
 .popup__conteiner_opened {

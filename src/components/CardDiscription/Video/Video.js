@@ -26,14 +26,3 @@ function Video({ card }) {
 }
 
 export default Video;
-
-<iframe
-  width="720"
-  height="405"
-  src="https://rutube.ru/play/embed/259455427138e2ae0cdda27004e5f2d8"
-  frameBorder="0"
-  allow="clipboard-write; autoplay"
-  webkitAllowFullScreen
-  mozallowfullscreen
-  allowFullScreen
-></iframe>;

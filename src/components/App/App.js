@@ -53,29 +53,29 @@ function App() {
 
   const onRegister = ({ name, email }) => {
     console.log({ name, email });
+    console.log(name);
     register(name, email)
       .then((res) => {
         console.log(res);
         setMessage(`${res.name}, Вы подписаны на наши новости`);
         setIsPopupOpen(true);
-        // onLogin({ email, password });
-        // return res;
       })
       .catch((err) => {
         console.log(err);
         if (err === "Ошибка: 409 Conflict") {
-          setMessage("Пользователь с таким email уже существует");
+          setMessage(`${name}, подписка на наши новости по этому email уже была оформлена ранее`);
         } else if (err === "Ошибка: 400 Bad Request") {
           setMessage("Переданы некорректные данные");
         } else {
-          setMessage("При регистрации пользователя произошла ошибка");
+          setMessage("При подписке на новости произошла ошибка");
         }
         setIsPopupOpen(true);
       })
       .finally(() => {
-        // setTimeout(() => {
-        //   setMessageError("");
-        // }, 4000);
+        setTimeout(() => {
+          setIsPopupOpen(false);
+          setMessage("");
+        }, 10000);
       });
   };
 
