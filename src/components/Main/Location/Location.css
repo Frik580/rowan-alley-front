@@ -3,8 +3,9 @@
     /* flex-direction: column; */
     padding: 100px;
     /* width: 100%; */
-    background-color: rgb(60, 60, 60);
-    color: #e8e8e8;
+    background-color: rgb(80, 80, 80);
+    /* color: #e8e8e8; */
+    color: #fff;
   }
   
   @media (max-width: 1000px) {

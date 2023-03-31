@@ -63,7 +63,7 @@ function App() {
       .catch((err) => {
         console.log(err);
         if (err === "Ошибка: 409 Conflict") {
-          setMessage(`${name}, подписка на наши новости по этому email уже была оформлена ранее`);
+          setMessage(`${name}, по email ${email} уже есть подписка на наши новости`);
         } else if (err === "Ошибка: 400 Bad Request") {
           setMessage("Переданы некорректные данные");
         } else {

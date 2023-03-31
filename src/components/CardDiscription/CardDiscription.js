@@ -10,23 +10,16 @@ function CardDiscription({ cards, onButtonHome }) {
   const { id } = useParams();
   const card = getCardById(cards, id);
 
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     left: 0,
-  //     behavior: "smooth",
-  //   });
-  // }, [id]);
 
   return (
     <section className="discription">
       <Video card={card} />
       <About card={card} />
-      {/* <Awards /> */}
-      <Link to="/" className="link">
-        <button className="discription__button hover-button" type="button">
+      <Awards card={card} />
+      <Link to="/" className="discription__button hover-button">
+        {/* <button className="discription__button hover-button" type="button"> */}
           Назад
-        </button>
+        {/* </button> */}
       </Link>
       <div className="discription__image_num_1" />
       <div className="discription__image_num_2" />
