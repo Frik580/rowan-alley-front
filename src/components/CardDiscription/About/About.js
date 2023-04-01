@@ -3,7 +3,6 @@ import "./About.css";
 function About({ card }) {
   return (
     <section className="about">
-      {/* <h2 className="about__title">Основные данные</h2> */}
       <p className="about__text"><strong>Годы жизни:</strong> {card.years}</p>
       <p className="about__text"><strong>Место рождения:</strong> {card.birthPlace}</p>
       <p className="about__text"><strong>Место службы:</strong> {card.dutyStation}</p>
