@@ -75,7 +75,7 @@
   width: 100%;
   background-color: #fff;
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 36px;
   font-weight: 400;
   font-style: normal;
@@ -103,7 +103,7 @@
 
 @media (max-width: 600px) {
   .newsform__form-item {
-    font-size: 12px;
+    font-size: 14px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -118,7 +118,7 @@
   background-color: rgb(224, 79, 79);
   color: #fff;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 36px;
   font-weight: 500;
   font-style: normal;
@@ -146,7 +146,7 @@
 }
 
 .newsform__error {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
   font-style: normal;
@@ -165,7 +165,7 @@
 
 @media (max-width: 600px) {
   .newsform__error {
-    font-size: 10px;
+    font-size: 12px;
     padding: 10px 16px;
   }
 }

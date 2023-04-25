@@ -2,7 +2,7 @@ import "./Header.css";
 import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import HeaderIcon from "./HeaderIcon/HeaderIcon";
 import imgFond from "../../images/fond.png";
-import imgFpg from "../../images/pgrants_logo_gp.png";
+import imgFpg from "../../images/pgrants_logo_gp3.png";
 import imgVK from "../../images/vk.svg";
 import imgRT from "../../images/rt.svg";
 

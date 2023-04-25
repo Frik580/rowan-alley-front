@@ -54,7 +54,7 @@
 .item:hover .item__description {
   visibility: visible;
   opacity: 1;
-  cursor: pointer;
+  cursor: default;
   transform: scale(120%);
 }
 

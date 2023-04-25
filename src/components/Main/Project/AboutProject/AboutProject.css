@@ -43,7 +43,7 @@
 }
 
 .about-project__column {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.2;
   font-weight: 400;
   font-style: normal;
@@ -58,7 +58,7 @@
 
 @media (max-width: 600px) {
   .about-project__column {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 

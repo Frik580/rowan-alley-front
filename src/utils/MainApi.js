@@ -1,5 +1,4 @@
-// export const BASE_URL = "https://api.movies.arseniy.nomoredomains.club";
-export const BASE_URL = "http://rowan-alley-api.ru";
+export const BASE_URL = "https://rowan-alley-api.ru";
 
 const handleResponse = (res) => {
   if (res.ok) {
