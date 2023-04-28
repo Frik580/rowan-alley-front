@@ -52,7 +52,7 @@ function Cards({
 
   return (
     <section className="elements">
-      <h2 className="elements__title">ГАЛЛЕРЕЯ ГЕРОЕВ</h2>
+      <h2 className="elements__title">ГАЛЕРЕЯ ГЕРОЕВ</h2>
       <SearchForm
         onFindCards={onFindCards}
         queryCardsListText={queryCardsListText}

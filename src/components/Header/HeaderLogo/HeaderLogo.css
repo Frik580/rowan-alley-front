@@ -1,6 +1,9 @@
 .logo {
+  display: flex;
+  align-items: center;
   margin-right: 25px;
   height: 64px;
+  text-decoration: none;
 }
 
 .logo__image {
@@ -18,5 +21,22 @@
   .logo {
     height: 40px;
     margin-right: 10px;
+  }
+}
+
+.logo__title {
+  width: 160px;
+  color: #3b3a2d;
+  font-size: 11x;
+  line-height: 1.2;
+  font-weight: 500;
+  font-style: normal;
+  margin-left: 10px;
+}
+
+@media (max-width: 700px) {
+  .logo__title {
+    font-size: 10px;
+    width: 100px;
   }
 }

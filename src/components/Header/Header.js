@@ -12,7 +12,7 @@ function Header() {
       <HeaderLogo
         url={"https://peacefound.ru"}
         src={imgFond}
-        title={"Российский Фонд Мира"}
+        title={"ПКО МОФ «Российский фонд мира»"}
       />
       <HeaderLogo
         url={"https://xn--80afcdbalict6afooklqi5o.xn--p1ai"}
