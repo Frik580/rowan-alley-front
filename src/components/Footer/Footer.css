@@ -6,7 +6,7 @@
   margin: 0 auto;
   padding: 25px 50px;
   background-color: rgb(50, 50, 50);
-  color: #fff;
+  color: rgb(140, 140, 140);
 }
 
 @media (max-width: 1000px) {
@@ -42,7 +42,6 @@
   line-height: 1.2;
   font-weight: 400;
   font-style: normal;
-  opacity: .4;
 }
 
 .footer__copyright {
@@ -50,7 +49,6 @@
   line-height: 1.2;
   font-weight: 400;
   font-style: normal;
-  opacity: .4;
 }
 
 .footer__link {
@@ -60,9 +58,8 @@
   line-height: 2;
   font-weight: 400;
   font-style: normal;
-  color: #fff;
+  color: rgb(140, 140, 140);
   text-decoration: none;
-  opacity: .4;
 }
 
 
@@ -75,6 +72,7 @@
 .footer__icon {
   height: 22px;
   margin-right: 10px;
+  opacity: .3;
 }
 
 @media (max-width: 700px) {

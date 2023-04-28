@@ -19,7 +19,7 @@ function Footer() {
           </a>
           <p className="footer__text">
             <img className="footer__icon" src={imgAdds} alt="" />
-            г. Пермь, ул. Ленина 51, каб. 103
+            Пермь, ул. Ленина 51, каб. 103
           </p>
         </div>
       </div>
