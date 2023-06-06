@@ -8,7 +8,6 @@ function CardDiscription({ cards }) {
   const getCardById = (cards, id) => cards.find((card) => card._id === id);
   const { id } = useParams();
   const card = getCardById(cards, id);
-  console.log(card.trailerLink);
 
   return (
     <section className="discription">

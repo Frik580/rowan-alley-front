@@ -10,7 +10,7 @@ function Location() {
           <Map
             defaultState={{
               center: [58.006, 56.22336],
-              zoom: 17,
+              zoom: 16,
               controls: [],
             }}
             width="100%"

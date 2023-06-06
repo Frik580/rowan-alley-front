@@ -4,10 +4,7 @@
 
 .promo__conteiner {
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: space-between; */
   min-height: calc(100vh - 114px);
-  /* height: 500px; */
   background-image: url("../../../images/background_1.JPG");
   background-repeat: no-repeat;
   background-position: left top;

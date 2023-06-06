@@ -4,14 +4,14 @@ export const WINDOW_SIZE = {
   MIDDLE_2: 562,
 };
 
-export const MOVIES_QUANTITY = {
+export const CARDS_QUANTITY = {
   HIGH: 10,
   MIDDLE: 8,
   MIDDLE_2: 9,
   SMALL: 6,
 };
 
-export const MOVIES_QUANTITY_NEXT = {
+export const CARDS_QUANTITY_NEXT = {
   HIGH: 5,
   MIDDLE: 4,
   MIDDLE_2: 3,

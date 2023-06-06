@@ -11,7 +11,7 @@ function Footer() {
         <p className="footer__copyright">&#169; {date.getFullYear()}</p>
         <div className="footer__contacts">
           <p className="footer__text">
-            Контакты ПКО МОФ «Российский фонд мира»:
+            Контакты ПКО МОФ «Российский фонд мира»
           </p>
           <a href="mailto:fondmira.perm@gmail.com" className="footer__link">
             <img className="footer__icon" src={imgEmail} alt="" />

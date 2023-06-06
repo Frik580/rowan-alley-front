@@ -4,8 +4,8 @@ import Card from "../Card/Card";
 import SearchForm from "../../../SearchForm/SearchForm";
 import {
   WINDOW_SIZE,
-  MOVIES_QUANTITY,
-  MOVIES_QUANTITY_NEXT,
+  CARDS_QUANTITY,
+  CARDS_QUANTITY_NEXT,
 } from "../../../../utils/Constants";
 
 function Cards({
@@ -32,15 +32,15 @@ function Cards({
 
   useEffect(() => {
     if (width >= WINDOW_SIZE.HIGH) {
-      setQuantity(MOVIES_QUANTITY.HIGH + count * MOVIES_QUANTITY_NEXT.HIGH);
+      setQuantity(CARDS_QUANTITY.HIGH + count * CARDS_QUANTITY_NEXT.HIGH);
     } else if (width >= WINDOW_SIZE.MIDDLE) {
-      setQuantity(MOVIES_QUANTITY.MIDDLE + count * MOVIES_QUANTITY_NEXT.MIDDLE);
+      setQuantity(CARDS_QUANTITY.MIDDLE + count * CARDS_QUANTITY_NEXT.MIDDLE);
     } else if (width >= WINDOW_SIZE.MIDDLE_2) {
       setQuantity(
-        MOVIES_QUANTITY.MIDDLE_2 + count * MOVIES_QUANTITY_NEXT.MIDDLE_2
+        CARDS_QUANTITY.MIDDLE_2 + count * CARDS_QUANTITY_NEXT.MIDDLE_2
       );
     } else if (width < WINDOW_SIZE.MIDDLE_2) {
-      setQuantity(MOVIES_QUANTITY.SMALL + count * MOVIES_QUANTITY_NEXT.MIDDLE);
+      setQuantity(CARDS_QUANTITY.SMALL + count * CARDS_QUANTITY_NEXT.MIDDLE);
     }
 
     const cards = cardsList.filter(function (item, index) {

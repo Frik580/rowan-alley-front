@@ -1,4 +1,5 @@
 export const BASE_URL = "https://rowan-alley-api.ru";
+// export const BASE_URL = "https://158.160.69.112";
 
 const handleResponse = (res) => {
   if (res.ok) {

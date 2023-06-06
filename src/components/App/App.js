@@ -3,6 +3,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "../Header/Header";
+import Navigation from "../Navigation/Navigation";
 import Footer from "../Footer/Footer";
 import Main from "../Main/Main";
 import Popup from "../Popup/Popup";
@@ -11,6 +12,7 @@ import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import { getAllCards, register } from "../../utils/MainApi";
 
 function App() {
+  const [isNavigationOpen, setIsNavigationOpen] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [cardsList, setCardsList] = useState([]);
@@ -63,7 +65,9 @@ function App() {
       .catch((err) => {
         console.log(err);
         if (err === "Ошибка: 409 Conflict") {
-          setMessage(`${name}, по email ${email} уже есть подписка на наши новости`);
+          setMessage(
+            `${name}, по email ${email} уже есть подписка на наши новости`
+          );
         } else if (err === "Ошибка: 400 Bad Request") {
           setMessage("Переданы некорректные данные");
         } else {
@@ -81,7 +85,15 @@ function App() {
 
   return (
     <div className="root">
-      <Header />
+      <Header
+        onOpenNavigation={() => setIsNavigationOpen(!isNavigationOpen)}
+        isNavigationOpen={isNavigationOpen}
+      />
+      {isNavigationOpen && (
+        <div className="root__navigation">
+          <Navigation />
+        </div>
+      )}
       <Routes>
         <Route
           path="/"
@@ -105,44 +117,6 @@ function App() {
           path="cards/:id"
           element={<CardDiscription cards={cardsList} />}
         />
-
-        {/* <Route
-            path="admin"
-            element={
-              <ProtectedRoute loggedIn={loggedIn}>
-                <Profile
-                  onLogout={onLogout}
-                  onUpdateUser={handleUpdateUser}
-                  messageError={messageProfile}
-                />
-              </ProtectedRoute>
-            }
-          /> */}
-
-        {/* <Route
-            path="signin"
-            element={
-              <ProtectedRoute loggedIn={!loggedIn}>
-                <AuthForm
-                  onLogin={onLogin}
-                  messageError={messageError}
-                  authForm="login"
-                />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="signup"
-            element={
-              <ProtectedRoute loggedIn={!loggedIn}>
-                <AuthForm
-                  onRegister={onRegister}
-                  messageError={messageError}
-                  authForm="register"
-                />
-              </ProtectedRoute>
-            }
-          /> */}
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

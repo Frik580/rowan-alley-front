@@ -18,7 +18,7 @@ function Video({ card }) {
             // allow="clipboard-write; autoplay"
             // webkitAllowFullScreen
             // mozallowfullscreen
-            allowFullScreen
+            // allowfullscreen
           />
         </div>
       )}
@@ -27,14 +27,3 @@ function Video({ card }) {
 }
 
 export default Video;
-
-<iframe
-  width="720"
-  height="405"
-  src="https://rutube.ru/play/embed/65c28742b3c6dfd3faede82404c1ff6a"
-  frameBorder="0"
-  allow="clipboard-write; autoplay"
-  webkitAllowFullScreen
-  mozallowfullscreen
-  allowFullScreen
-></iframe>;
